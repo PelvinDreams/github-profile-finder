@@ -111,13 +111,12 @@ body{
     .user-info ul li{
         display: flex;
         align-items: center;
-        padding: 0.25rem ;
+        padding: 0.25rem;
     }
     
     .user-info ul li strong{
         font-size: 0.9rem;
         margin-left: 0.5rem;
-        padding: 0.25rem;
     }
     
 }

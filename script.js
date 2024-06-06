@@ -24,7 +24,7 @@ async function getRepos(username) {
         const { data } = await axios.get(APIURL + username + '/repos?sort=created');
         addReposToCard(data);
     } catch (err) {
-        createErrorCard('No profile with this username');
+        createErrorCard('Problem fetching repo');
     }
 }
 
@@ -38,9 +38,9 @@ function createUserCard(user) {
             <h2>${user.name}</h2>
             <p>${user.bio}</p>
             <ul>
-                <li>${user.followers}<strong> followers</strong></li>
-                <li>${user.following}<strong> following</strong></li>
-                <li>${user.public_repos}<strong> repos</strong></li>
+                <li>${user.followers} <strong>followers</strong></li>
+                <li>${user.following} <strong> following</strong></li>
+                <li>${user.public_repos} <strong> repos</strong></li>
             </ul>
             <div id="repos"></div>
         </div>
@@ -63,7 +63,7 @@ function createErrorCard(msg) {
 function addReposToCard(repos) {
     const reposEl = document.getElementById('repos');
 
-    repos.slice(0, 5).forEach(repo => {
+    repos.slice(0, 10).forEach(repo => {
         const repoEl = document.createElement('a');
         repoEl.classList.add('repo');
         repoEl.href = repo.html_url;
