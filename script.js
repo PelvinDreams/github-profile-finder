@@ -34,6 +34,7 @@ function createUserCard(user) {
         <div>
              <div data-aos="fade-right"> <img src="${user.avatar_url}" alt="${user.name}" class="avatar"></div>
         </div>
+        <div data-aos="zoom-out-down">
         <div class="user-info">
             <h2>${user.name}</h2>
             <p>${user.bio}</p>
@@ -42,7 +43,8 @@ function createUserCard(user) {
                 <li>${user.following} <strong> following</strong></li>
                 <li>${user.public_repos} <strong> repos</strong></li>
             </ul>
-            <div id="repos"></div>
+            </div>
+            <div data-aos="zoom-in-right"> <div id="repos"></div> </div>
         </div>
     </div> 
     `
