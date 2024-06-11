@@ -32,7 +32,7 @@ function createUserCard(user) {
     const cardHTML = `
     <div class="card"> 
         <div>
-            <img src="${user.avatar_url}" alt="${user.name}" class="avatar">
+             <div data-aos="fade-right"> <img src="${user.avatar_url}" alt="${user.name}" class="avatar"></div>
         </div>
         <div class="user-info">
             <h2>${user.name}</h2>

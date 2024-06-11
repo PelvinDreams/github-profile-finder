@@ -118,5 +118,9 @@ body{
         font-size: 0.9rem;
         margin-left: 0.5rem;
     }
+
+    .user-form input {
+        width: 90%;
+    }
     
 }
